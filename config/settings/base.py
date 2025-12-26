@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
 
+    'drf_spectacular',
+
     "apps.accounts",
     "apps.stocks",
     "apps.watchlists",
@@ -65,6 +67,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'config.urls'
 
 REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': ( 
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
@@ -75,8 +78,10 @@ REST_FRAMEWORK = {
 from datetime import timedelta
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=15),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=15),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=15),
+
+    "TOKEN_OBTAIN_SERIALIZER": "apps.accounts.views.MyTokenObtainPairSerializer",
     
     "AUTH_HEADER_TYPES": ("Bearer",),
     "USER_ID_FIELD": "id", 

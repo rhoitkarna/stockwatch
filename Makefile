@@ -22,6 +22,7 @@ migrate:
 superuser:
 	$(EXEC_WEB) python manage.py createsuperuser
 
+
 # View Logs (Follow)
 logs:
 	$(COMPOSE) logs -f
