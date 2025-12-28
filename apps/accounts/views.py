@@ -18,7 +18,6 @@ from .serializers import (
 
 User = get_user_model()
 
-# --- 1. AUTHENTICATION & JWT ---
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
@@ -34,8 +33,6 @@ class MyTokenObtainPairView(TokenObtainPairView):
     """Login view that returns access/refresh tokens with custom claims."""
     serializer_class = MyTokenObtainPairSerializer
 
-
-# --- 2. USER MANAGEMENT VIEWS ---
 
 class RegisterView(generics.CreateAPIView):
     """Public endpoint to create a new user account."""
