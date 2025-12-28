@@ -27,7 +27,7 @@ The SECRET_KEY provided in the .env sample is for development only. In a product
 ## API:
 
 * API Root: http://127.0.0.1:8000/api/v1/
-* Swagger Docs: http://127.0.0.1:8000/api/docs/ 
+* Swagger Docs: http://127.0.0.1:8000/api/v1/docs/ 
 
 ## Pending Features
 Due to the assignment's time constraints, the following features are planned for the next phase:
