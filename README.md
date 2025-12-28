@@ -19,15 +19,15 @@ The SECRET_KEY provided in the .env sample is for development only. In a product
 
 ## Makefile for ease of commands:
 
-make up        # Build and start containers (Postgres & Django)
-make migrate   # Run database migrations
-make superuser # Create your admin account
+* make up        # Build and start containers (Postgres & Django)
+* make migrate   # Run database migrations
+* make superuser # Create your admin account
 
 
 ## API:
 
-API Root: http://127.0.0.1:8000/api/v1/
-Swagger Docs: http://127.0.0.1:8000/api/docs/ 
+* API Root: http://127.0.0.1:8000/api/v1/
+* Swagger Docs: http://127.0.0.1:8000/api/docs/ 
 
 ## Pending Features
 Due to the assignment's time constraints, the following features are planned for the next phase:
