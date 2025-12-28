@@ -29,3 +29,8 @@ make superuser # Create your admin account
 API Root: http://127.0.0.1:8000/api/v1/
 Swagger Docs: http://127.0.0.1:8000/api/docs/ 
 
+## Pending Features
+Due to the assignment's time constraints, the following features are planned for the next phase:
+* **Real-time Data Integration:** Connecting to live stock feeds (e.g., Alpha Vantage or YFinance).
+* **Distributed Task Queue:** Implementing Celery/Redis for background analytics processing.
+* **Enhanced Caching:** Using Redis to cache frequent market data queries.
